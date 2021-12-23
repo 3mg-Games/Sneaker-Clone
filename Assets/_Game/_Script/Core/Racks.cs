@@ -94,10 +94,10 @@ namespace Clone.Core
         {
             RackPrice.gameObject.SetActive(false);
             StoreGraphics.SetActive(true);
-            PurchaseGraphics.GetComponent<MeshRenderer>().enabled = false;
-            Destroy(PurchaseGraphics, 0.2f);
-            transform.localScale = new Vector3(transform.localScale.x, 1, transform.localScale.z);
-            transform.localPosition = new Vector3(transform.localPosition.x, YPosAfterUnlock, transform.localPosition.z);
+            //PurchaseGraphics.GetComponent<MeshRenderer>().enabled = false;
+            Destroy(PurchaseGraphics);
+            //transform.localScale = new Vector3(transform.localScale.x, 1, transform.localScale.z);
+            //transform.localPosition = new Vector3(transform.localPosition.x, YPosAfterUnlock, transform.localPosition.z);
             CheckStore();
             isRackOpen = true;
         }

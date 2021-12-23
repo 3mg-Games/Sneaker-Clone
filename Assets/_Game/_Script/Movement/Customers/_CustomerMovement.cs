@@ -31,7 +31,7 @@ namespace Clone.Movement
         
         void Update()
         {
-            if (target == null)
+            if (target == null && !GetComponent<Clone.Control._CustomerControl>().isTradingGoingOn)
                 targetSet();
             move();
         }
@@ -46,13 +46,20 @@ namespace Clone.Movement
                 transform.rotation = Quaternion.Euler(0, angle, 0);
             }
 
-            if (!tradeIsOver)
+            if (!tradeIsOver && !GetComponent<Clone.Control._CustomerControl>().isTradingGoingOn)
             {
                 agent.SetDestination(target.position);                
             }
 
             if (tradeIsOver)
+            {
                 agent.SetDestination(end.position);
+/*                if (target != null)
+                {
+                    target.GetComponent<dottedCircle>().occupied = false;.
+                    target = null;
+                }    */            
+            }
 
         }
 

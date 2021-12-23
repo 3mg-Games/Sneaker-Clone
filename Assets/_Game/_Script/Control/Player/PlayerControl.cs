@@ -9,6 +9,8 @@ namespace Clone.Control
         Clone.Core.PlayerStackingAndUnstacking PlayerStackingAndUnstacking;
         Clone.Core.GameManager gm;
         public Clone.Core.customerServedUI cSUI;
+
+        public Vector3 customerUISpwanOffset;
         void Start()
         {
             gm = FindObjectOfType<Clone.Core.GameManager>();
@@ -23,12 +25,24 @@ namespace Clone.Control
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Customer") && !other.GetComponent<Clone.Control._CustomerControl>().clothTookFromPlayer && 
-                other.GetComponent<Clone.Control._CustomerControl>().move.isRechedStation && PlayerStackingAndUnstacking.ClothObject.Count>0)
+            if (other.gameObject.CompareTag("Customer") && PlayerStackingAndUnstacking.ClothObject.Count > 0 && !other.GetComponent<Clone.Control._CustomerControl>().clothTookFromPlayer && 
+                other.GetComponent<Clone.Control._CustomerControl>().move.isRechedStation )
             {
                 //cSUI.StartUIMoving(other.transform.position);
-                Instantiate(gm.customerUI, other.transform.position,Quaternion.identity);
+                Instantiate(gm.customerUI, other.transform.position + customerUISpwanOffset, Quaternion.identity);
                 
+                PlayerStackingAndUnstacking.RemoveCloth(other);
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.gameObject.CompareTag("Customer") && !gm.GameplayPause &&  PlayerStackingAndUnstacking.ClothObject.Count > 0 && !other.GetComponent<Clone.Control._CustomerControl>().clothTookFromPlayer &&
+                other.GetComponent<Clone.Control._CustomerControl>().move.isRechedStation)
+            {
+                //cSUI.StartUIMoving(other.transform.position);
+                Instantiate(gm.customerUI, other.transform.position + customerUISpwanOffset, Quaternion.identity);
+
                 PlayerStackingAndUnstacking.RemoveCloth(other);
             }
         }

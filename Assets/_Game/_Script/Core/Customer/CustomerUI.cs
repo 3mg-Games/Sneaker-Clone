@@ -26,14 +26,22 @@ namespace Clone.Core
 
         void AskForCloth()
         {
-            if (CC.NeedItemCode == CC.move.levelManager.Rack_0.ClothIDNumber)
-                Cloth.sprite = CC.move.levelManager.RackCloth_0;
-            if (CC.NeedItemCode == CC.move.levelManager.Rack_1.ClothIDNumber)
-                Cloth.sprite = CC.move.levelManager.RackCloth_1;
-            if (CC.NeedItemCode == CC.move.levelManager.Rack_2.ClothIDNumber)
-                Cloth.sprite = CC.move.levelManager.RackCloth_2;
-            if (CC.NeedItemCode == CC.move.levelManager.Rack_3.ClothIDNumber)
-                Cloth.sprite = CC.move.levelManager.RackCloth_3;
+            try
+            {
+                if (CC.NeedItemCode == CC.move.levelManager.Rack_0.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth_0;
+                if (CC.NeedItemCode == CC.move.levelManager.Rack_1.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth_1;
+                if (CC.NeedItemCode == CC.move.levelManager.Rack_2.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth_2;
+                if (CC.NeedItemCode == CC.move.levelManager.Rack_3.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth_3;
+            }
+            catch
+            {
+
+            }
+           
         }
 
         void HolderAppearance()

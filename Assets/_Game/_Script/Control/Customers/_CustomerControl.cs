@@ -62,14 +62,19 @@ namespace Clone.Control {
                 print("MoneyThrown");
                 //Spwanning coin desable comment
                 //Instantiate(Money, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                StartCoroutine(activateAnim(0.2f));               
                 moneySpwanned = true;
-                StartCoroutine(activateAnim(0.2f));
             }
         }
         IEnumerator activateAnim(float t)
         {
-            yield return new WaitForSeconds(t);
+            yield return new WaitForSeconds(t);            
             move.anime.SetBool("tradeComplete", true);
+            if (move.target != null)
+            {
+                move.target.GetComponent<Clone.Movement.dottedCircle>().occupied = false;
+                move.target = null;
+            }
         }
         void takeCloth()
         {
@@ -99,8 +104,7 @@ namespace Clone.Control {
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("end") && isTradeComplete)
-            {
-                move.target.GetComponent<Clone.Movement.dottedCircle>().occupied = false;
+            {                
                 Destroy(this.gameObject);
             }
 

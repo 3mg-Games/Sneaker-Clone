@@ -81,14 +81,31 @@ namespace Clone.Core
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                if (collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+                if(NextExpansion != null&& NextExpansion.isExpansion)
                 {
-                    if (MaxMoneyNeededToUnlock >= 10 && gm.MaxMoney >= MaxMoneyNeededToUnlock && !isExpansion)
+                    if (collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
                     {
-                        MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
-                        gm.MaxMoney -= MoneyReduceSpeed;
+                        if (MaxMoneyNeededToUnlock >= 10 && gm.MaxMoney >= MaxMoneyNeededToUnlock && !isExpansion)
+                        {
+                            MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
+                            gm.MaxMoney -= MoneyReduceSpeed;
+                        }
                     }
                 }
+
+                if(NextExpansion == null)
+                    {
+                        if (collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+                        {
+                            if (MaxMoneyNeededToUnlock >= 10 && gm.MaxMoney >= MaxMoneyNeededToUnlock && !isExpansion)
+                            {
+                                MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
+                                gm.MaxMoney -= MoneyReduceSpeed;
+                            }
+                        }
+                    }
+
+                
             }
         }
     }

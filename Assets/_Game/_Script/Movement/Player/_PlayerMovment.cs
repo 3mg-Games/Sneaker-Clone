@@ -20,7 +20,7 @@ namespace Clone.Movement
         Vector3 velocity;
         
         public bool isGrounded;
-        
+        public bool isHoldingCloths;
         private float turnSmoothVelocity;
                
         private void Start()
