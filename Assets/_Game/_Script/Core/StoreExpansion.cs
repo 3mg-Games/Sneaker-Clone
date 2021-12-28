@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace Clone.Core
+namespace Sneaker.Core
 {
     public class StoreExpansion : MonoBehaviour
     {
 
-        private Clone.Core.GameManager gm;
-        public Clone.Core.StoreExpansion NextExpansion;
+        private Sneaker.Core.GameManager gm;
+        public Sneaker.Core.StoreExpansion NextExpansion;
         public TextMeshPro ExpansionPrice;
         public Collider[] ColliderToDestroy;
         public GameObject LockedArea, UnlockedArea;
@@ -29,7 +29,7 @@ namespace Clone.Core
                 Border.SetActive(false);
             }
 
-            gm = FindObjectOfType<Clone.Core.GameManager>();
+            gm = FindObjectOfType<Sneaker.Core.GameManager>();
             if (!isExpansion)
             {
                 LockedArea.SetActive(true);
@@ -51,6 +51,8 @@ namespace Clone.Core
         {
             CheckExpansionCondition();
             ExpansionPrice.text = "$" + MaxMoneyNeededToUnlock.ToString();
+
+            
         }
 
         void CheckExpansionCondition()
@@ -67,6 +69,7 @@ namespace Clone.Core
 
             if(isExpansion && !isExpanded)
             {
+                FindObjectOfType<AudioManager>().source.PlayOneShot(FindObjectOfType<AudioManager>().Unlock);
                 LockedArea.SetActive(false);
                 UnlockedArea.SetActive(true);
                 for (int i = 0; i <= ColliderToDestroy.Length - 1; i++)
@@ -83,9 +86,9 @@ namespace Clone.Core
             {
                 if(NextExpansion != null&& NextExpansion.isExpansion)
                 {
-                    if (collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+                    if (collision.gameObject.GetComponent<Sneaker.Movement._PlayerMovment>().direction.magnitude <= 0)
                     {
-                        if (MaxMoneyNeededToUnlock >= 10 && gm.MaxMoney >= MaxMoneyNeededToUnlock && !isExpansion)
+                        if (MaxMoneyNeededToUnlock > 0 && gm.MaxMoney >= MoneyReduceSpeed && !isExpansion)
                         {
                             MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
                             gm.MaxMoney -= MoneyReduceSpeed;
@@ -95,9 +98,9 @@ namespace Clone.Core
 
                 if(NextExpansion == null)
                     {
-                        if (collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+                        if (collision.gameObject.GetComponent<Sneaker.Movement._PlayerMovment>().direction.magnitude <= 0)
                         {
-                            if (MaxMoneyNeededToUnlock >= 10 && gm.MaxMoney >= MaxMoneyNeededToUnlock && !isExpansion)
+                            if (MaxMoneyNeededToUnlock > 0 && gm.MaxMoney >= MoneyReduceSpeed && !isExpansion)
                             {
                                 MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
                                 gm.MaxMoney -= MoneyReduceSpeed;

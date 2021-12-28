@@ -13,8 +13,8 @@ public class CameraTriggerEvent : MonoBehaviour
     IEnumerator delay(float t)
     {
         yield return new WaitForSeconds(t);
-        if (FindObjectOfType<Clone.Core.GameManager>().GameplayPause)
-            FindObjectOfType<Clone.Core.GameManager>().GameplayPause = false;
+        if (FindObjectOfType<Sneaker.Core.GameManager>().GameplayPause)
+            FindObjectOfType<Sneaker.Core.GameManager>().GameplayPause = false;
     }
     public void doNothing()
     {

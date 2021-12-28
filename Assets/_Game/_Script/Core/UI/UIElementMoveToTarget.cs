@@ -9,10 +9,10 @@ public class UIElementMoveToTarget : MonoBehaviour
     Vector3 targetPos;
     Camera cam;
 
-    Clone.Core.customerServedUI customerServedUI;
+    Sneaker.Core.customerServedUI customerServedUI;
     private void Start()
     {
-        customerServedUI = FindObjectOfType<Clone.Core.customerServedUI>();
+        customerServedUI = FindObjectOfType<Sneaker.Core.customerServedUI>();
         target = customerServedUI.target;
         if (cam == null)
         {
@@ -28,7 +28,7 @@ public class UIElementMoveToTarget : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         if (transform.position == targetPos)
         {
-            FindObjectOfType<Clone.Core.GameManager>().incresementOfCustomerServed();
+            FindObjectOfType<Sneaker.Core.GameManager>().incresementOfCustomerServed();
             Destroy(this.gameObject);
         }
     }

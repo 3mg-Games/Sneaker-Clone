@@ -4,9 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-namespace Clone.Core
+namespace Sneaker.Core
 {    
-
     public class Racks : MonoBehaviour
     {
         public int ClothIDNumber;
@@ -19,10 +18,10 @@ namespace Clone.Core
         public GameObject PurchaseGraphics;
         public GameObject ClothToGivePlayer;
 
+        public int LimitCountForCloth;
+        
         public float giveItemToPlayer;
         public float waitTimer = 1;
-        public float YPosAfterUnlock;
-        
         public int MoneyReduceSpeed;
         public int MaxMoneyNeededToUnlock;
 
@@ -34,23 +33,26 @@ namespace Clone.Core
 
         [Header("Logic For Store")]
         public bool Rack0;        
-        public bool Rack1;        
-        public bool Rack2;        
-        public bool Rack3;
+        public bool Rack1;
+        /* public bool Rack2;        
+         public bool Rack3;*/
 
+        public int ClothXCount;
+        public int limitToGiveCloth;
 
-        private Clone.Control.PlayerControl playerControl;
-        private Clone.Core.PlayerStackingAndUnstacking PlayerStackingAndUnstacking;
-        private Clone.Core.GameManager gm;
-        private Clone.Core._LevelManager levelManager;
+        private Sneaker.Control.PlayerControl playerControl;
+        private Sneaker.Core.PlayerStackingAndUnstacking PlayerStackingAndUnstacking;
+        private Sneaker.Core.GameManager gm;
+        private Sneaker.Core._LevelManager levelManager;
+        private Sneaker.Core.AudioManager audioManager;
         
         void Start()
         {
-            gm = FindObjectOfType<Clone.Core.GameManager>();
-            playerControl = FindObjectOfType<Clone.Control.PlayerControl>();
-            PlayerStackingAndUnstacking = FindObjectOfType<Clone.Core.PlayerStackingAndUnstacking>();
-            levelManager = GetComponentInParent<Clone.Core._LevelManager>();
-
+            gm = FindObjectOfType<Sneaker.Core.GameManager>();
+            playerControl = FindObjectOfType<Sneaker.Control.PlayerControl>();
+            PlayerStackingAndUnstacking = FindObjectOfType<Sneaker.Core.PlayerStackingAndUnstacking>();
+            levelManager = GetComponentInParent<Sneaker.Core._LevelManager>();
+            audioManager = FindObjectOfType<Sneaker.Core.AudioManager>();
             giveItemToPlayer = waitTimer;
             if (isRackClosed)
             {
@@ -67,7 +69,10 @@ namespace Clone.Core
                 whenPlayerIsOnRack();
 
             if (MaxMoneyNeededToUnlock <= 0 && isRackClosed)
+            {
+                GetComponent<Sneaker.Control._ClothRegenrator>().spwanOnce();
                 isRackClosed = false;
+            }
 
             if (MaxMoneyNeededToUnlock <= 0 && !Unlock)
                 Unlock = true;
@@ -81,17 +86,40 @@ namespace Clone.Core
             removeClothFromRack();
             CheckStore();
         }
-
+        public bool section3;
         public void CheckStore()
         {
-            levelManager.isRackOpen_0 = Rack0;
-            levelManager.isRackOpen_1 = Rack1;
-            levelManager.isRackOpen_2 = Rack2;
-            levelManager.isRackOpen_3 = Rack3;
+            if (section3)
+            {
+                if (!levelManager.OpenRacks.Contains(ClothIDNumber))
+                    levelManager.OpenRacks.Add(ClothIDNumber);                
+            }
+            if (!section3)
+            {
+                if (levelManager.isRackOpen0 && Unlock)
+                {
+                    /*levelManager.isRackOpen_0 = Rack0;*/
+                    if (!levelManager.OpenRacks.Contains(ClothIDNumber))
+                        levelManager.OpenRacks.Add(ClothIDNumber);
+                }
+                if (levelManager.isRackOpen1 && Unlock)
+                {
+                    /*levelManager.isRackOpen_1 = Rack1;*/
+                    if (!levelManager.OpenRacks.Contains(ClothIDNumber))
+                        levelManager.OpenRacks.Add(ClothIDNumber);
+                }
+            }
+
+
+
+          
+            //levelManager.isRackOpen_2 = Rack2;
+            //levelManager.isRackOpen_3 = Rack3;
         }
 
         public void whenPlayerIsOnRack()
         {
+            FindObjectOfType<Sneaker.Core.AudioManager>().source.PlayOneShot(FindObjectOfType<Sneaker.Core.AudioManager>().Unlock, 1f);
             RackPrice.gameObject.SetActive(false);
             StoreGraphics.SetActive(true);
             //PurchaseGraphics.GetComponent<MeshRenderer>().enabled = false;
@@ -104,12 +132,15 @@ namespace Clone.Core
         public void GiveItemToPlayer()
         {
 
-            if (isPlayerNear && PlayerStackingAndUnstacking.ClothObject.Count <= gm.PlayerClothCollectionLimit-1 && RackCloths.Count >0)
+            if (isPlayerNear && PlayerStackingAndUnstacking.ClothObject.Count <= gm.PlayerClothCollectionLimit-1 && limitToGiveCloth<= gm.PlayerClothCollectionLimit -5 && RackCloths.Count >0)
             {
                 giveItemToPlayer -= Time.deltaTime;
                 if (giveItemToPlayer <= 0)
                 {
-                    playerControl.GetComponent<Clone.Core.PlayerStackingAndUnstacking>().addClothToStack(ClothToGivePlayer, ClothIDNumber);                    
+
+                    playerControl.GetComponent<Sneaker.Core.PlayerStackingAndUnstacking>().addClothToStack(ClothToGivePlayer, ClothIDNumber);
+                    ClothXCount++;
+                    limitToGiveCloth++;
                     isPlayerNear = false;
                     Destroy(RackCloths[0].gameObject);
                     giveItemToPlayer = waitTimer;                   
@@ -138,17 +169,16 @@ namespace Clone.Core
 
         private void OnCollisionStay(Collision collision)
         {
-            if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+            if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<Sneaker.Movement._PlayerMovment>().direction.magnitude <= 0)
             {
-                isPlayerNear = true;
+                if(ClothXCount<= LimitCountForCloth)
+                    isPlayerNear = true;
             }
 
-
-
-            if (collision.gameObject.CompareTag("Player") && isRackClosed && collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+            if (collision.gameObject.CompareTag("Player") && isRackClosed && collision.gameObject.GetComponent<Sneaker.Movement._PlayerMovment>().direction.magnitude <= 0)
             {
                 isPlayerOnClosedRack = true;
-                if(gm.MaxMoney >= MaxMoneyNeededToUnlock && MaxMoneyNeededToUnlock > 0)
+                if(gm.MaxMoney > MoneyReduceSpeed && MaxMoneyNeededToUnlock > 0)
                 {
                     MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
                     gm.MaxMoney -= MoneyReduceSpeed;
@@ -157,6 +187,10 @@ namespace Clone.Core
             }
         }
 
+        public void reduce()
+        {
+            limitToGiveCloth--;
+        }
         private void OnCollisionExit(Collision collision)
         {
             if (isPlayerNear)
@@ -164,6 +198,9 @@ namespace Clone.Core
 
             if (isPlayerOnClosedRack)
                 isPlayerOnClosedRack = false;
+
+            if (ClothXCount > 0)
+                ClothXCount = 0;
         }
 
     }

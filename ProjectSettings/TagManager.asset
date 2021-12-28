@@ -9,6 +9,10 @@ TagManager:
   - end
   - FxTemporaire
   - fittingStation
+  - Coin
+  - GameManager
+  - Ground
+  - PackingPlace
   layers:
   - Default
   - TransparentFX
@@ -23,11 +27,11 @@ TagManager:
   - EjectedCloth
   - CustomerCollider
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Money
+  - Money Collector
+  - Cloth Holder
+  - Door
+  - HideFromCam
   - 
   - 
   - 

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace Clone.Core
+namespace Sneaker.Core
 {
     public class FittingStation : MonoBehaviour
     {
-        private Clone.Core.GameManager gm;
+        private Sneaker.Core.GameManager gm;
 
         public TextMeshPro StationPrice;
         public GameObject Mirror1, Mirror2, Circle1, Circle2,MoneySymbol;
@@ -20,7 +20,7 @@ namespace Clone.Core
         private bool isStoreOpened;
         private void Start()
         {
-            gm = FindObjectOfType<Clone.Core.GameManager>();
+            gm = FindObjectOfType<Sneaker.Core.GameManager>();
 
             if (!isStationOpen)
             {
@@ -49,6 +49,8 @@ namespace Clone.Core
 
             if(!isStoreOpened && isStationOpen)
             {
+                FindObjectOfType<AudioManager>().source.PlayOneShot(FindObjectOfType<AudioManager>().Unlock);
+
                 if (poofEffect != null)
                     poofEffect.gameObject.SetActive(true);
 
@@ -58,6 +60,10 @@ namespace Clone.Core
                 Circle2.SetActive(true);
                 MoneySymbol.SetActive(false);
                 StationPrice.gameObject.SetActive(false);
+                if (!gm.FittingStationList.Contains(this.gameObject))
+                {
+                    gm.FittingStationList.Add(this.gameObject);
+                }
                 isStoreOpened = true;
             }
         }
@@ -65,9 +71,9 @@ namespace Clone.Core
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                if (collision.gameObject.GetComponent<Clone.Movement._PlayerMovment>().direction.magnitude <= 0)
+                if (collision.gameObject.GetComponent<Sneaker.Movement._PlayerMovment>().direction.magnitude <= 0)
                 {
-                    if (MaxMoneyNeededToUnlock >= 10 && gm.MaxMoney >= MaxMoneyNeededToUnlock && !isStationOpen)
+                    if (MaxMoneyNeededToUnlock > 0 && gm.MaxMoney >= MoneyReduceSpeed && !isStationOpen)
                     {
                         MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
                         gm.MaxMoney -= MoneyReduceSpeed;                        

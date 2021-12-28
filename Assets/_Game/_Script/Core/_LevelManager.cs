@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Clone.Core
+namespace Sneaker.Core
 {
    public class _LevelManager : MonoBehaviour
     {
@@ -12,24 +12,30 @@ namespace Clone.Core
         public Transform spwanPos;
         public Transform EndPos;
         public GameObject Female1;
+        public GameObject Money;
+        public GameObject Money1;
 
         [Header("Rack Data")]
-        public Racks Rack_0;
-        public Racks Rack_1;
-        public Racks Rack_2;
-        public Racks Rack_3;
+        public Racks Rack0;
+        public Racks Rack1;
+        public Sneaker.Control.ProcessingStationRack PStationRack0;
+        public Sneaker.Control.ProcessingStationRack PStationRack1;
+
+        //public Racks Rack_2;
+        //public Racks Rack_3;
 
         [Header("Rack Open")]
-        public bool isRackOpen_0;
-        public bool isRackOpen_1;
-        public bool isRackOpen_2;
-        public bool isRackOpen_3;
+        public bool isRackOpen0;
+        public bool isRackOpen1;
+
+        public bool isRackOpen2;
+        public bool isRackOpen3;
 
         [Header("Racks Cloth UI")]
-        public Sprite RackCloth_0;
-        public Sprite RackCloth_1;
-        public Sprite RackCloth_2;
-        public Sprite RackCloth_3;
+        public Sprite RackCloth0;
+        public Sprite RackCloth1;
+        public Sprite RackCloth2;
+        public Sprite RackCloth3;
 
         public float spwanTimer = 2;
         void Start()
@@ -37,9 +43,24 @@ namespace Clone.Core
             spwnner = spwanTimer;
         }
 
-        
         void Update()
         {
+            if (this.gameObject.activeSelf && !FindObjectOfType<GameManager>().SectionsList.Contains(this.gameObject))
+                FindObjectOfType<GameManager>().SectionsList.Add(this.gameObject);
+
+            if (Rack0 != null && Rack0.Unlock)
+                isRackOpen0 = true;
+
+            if ( Rack1 != null && Rack1.Unlock )
+                isRackOpen1 = true;
+
+            if (PStationRack0 != null && PStationRack0.Unlock)
+                isRackOpen2 = true;
+
+            if (PStationRack1 != null && PStationRack1.Unlock)
+                isRackOpen3 = true;
+
+
             if (StationPosition.Count > 0) 
             {
                 spwnCustomers();
@@ -59,8 +80,8 @@ namespace Clone.Core
             if (spwnner <= 0)
             {
                 GameObject customer = Instantiate(Female1, spwanPos.position, Quaternion.identity);
-                customer.GetComponent<Clone.Movement._CustomerMovement>().levelManager = GetComponent<_LevelManager>();
-                customer.GetComponent<Clone.Movement._CustomerMovement>().end = EndPos;
+                customer.GetComponent<Sneaker.Movement._CustomerMovement>().levelManager = GetComponent<_LevelManager>();
+                customer.GetComponent<Sneaker.Movement._CustomerMovement>().end = EndPos;
                 customer.transform.parent = spwanPos;
                 spwnner = spwanTimer;
             }

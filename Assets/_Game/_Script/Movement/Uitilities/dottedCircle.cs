@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Clone.Movement
+namespace Sneaker.Movement
 {
     public class dottedCircle : MonoBehaviour
     {
@@ -13,11 +13,11 @@ namespace Clone.Movement
         private float a;
         float C;
         private SpriteRenderer SR;
-        private Clone.Core._LevelManager levelManager;
+        private Sneaker.Core._LevelManager levelManager;
         private void Start()
         {
             //levelManager = FindObjectOfType<Clone.Core._LevelManager>();
-            levelManager = GetComponentInParent<Clone.Core._LevelManager>();
+            levelManager = GetComponentInParent<Sneaker.Core._LevelManager>();
             StartCoroutine(StationPositionAdd(0.5f));
             SR = GetComponent<SpriteRenderer>();
             C = SR.color.a;

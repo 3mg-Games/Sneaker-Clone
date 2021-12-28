@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Clone.Core
+namespace Sneaker.Core
 {
     public class SectionUnlocker : MonoBehaviour
     {

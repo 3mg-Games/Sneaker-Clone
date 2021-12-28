@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Clone.Movement
+namespace Sneaker.Movement
 {
     public class _PlayerMovment : MonoBehaviour
     {
@@ -33,6 +33,15 @@ namespace Clone.Movement
         private void Update()
         {
             movement();
+
+            if (GetComponent<Sneaker.Core.PlayerStackingAndUnstacking>().ClothObject.Count > 0)
+                isHoldingCloths = true;
+            if (GetComponent<Sneaker.Core.PlayerStackingAndUnstacking>().ClothObject.Count <= 0)
+                isHoldingCloths = false;
+
+            anim.SetBool("hold", isHoldingCloths);
+
+
         }
         void movement()
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Clone.Core
+namespace Sneaker.Core
 {
     public class CustomerUI : MonoBehaviour
     {
@@ -11,7 +11,7 @@ namespace Clone.Core
         public Transform UIHolder;
         public Vector3 HolderPositionOffset;
 
-        public Clone.Control._CustomerControl CC;
+        public Sneaker.Control._CustomerControl CC;
 
         void Start()
         {
@@ -28,14 +28,16 @@ namespace Clone.Core
         {
             try
             {
-                if (CC.NeedItemCode == CC.move.levelManager.Rack_0.ClothIDNumber)
-                    Cloth.sprite = CC.move.levelManager.RackCloth_0;
-                if (CC.NeedItemCode == CC.move.levelManager.Rack_1.ClothIDNumber)
-                    Cloth.sprite = CC.move.levelManager.RackCloth_1;
-                if (CC.NeedItemCode == CC.move.levelManager.Rack_2.ClothIDNumber)
-                    Cloth.sprite = CC.move.levelManager.RackCloth_2;
-                if (CC.NeedItemCode == CC.move.levelManager.Rack_3.ClothIDNumber)
-                    Cloth.sprite = CC.move.levelManager.RackCloth_3;
+                if (CC.NeedItemCode == CC.move.levelManager.Rack0.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth0;
+
+                if (CC.move.levelManager.Rack1 != null && CC.NeedItemCode == CC.move.levelManager.Rack1.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth1;
+
+                if (CC.move.levelManager.PStationRack0 != null &&  CC.NeedItemCode == CC.move.levelManager.PStationRack0.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth2;
+                if (CC.move.levelManager.PStationRack1 != null && CC.NeedItemCode == CC.move.levelManager.PStationRack1.ClothIDNumber)
+                    Cloth.sprite = CC.move.levelManager.RackCloth3;
             }
             catch
             {

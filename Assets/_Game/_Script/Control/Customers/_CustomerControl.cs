@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Clone.Control {
+namespace Sneaker.Control {
     public class _CustomerControl : MonoBehaviour
     {        
-        [HideInInspector]public Clone.Movement._CustomerMovement move;
+        [HideInInspector]public Sneaker.Movement._CustomerMovement move;
         public int NeedItemCode;
 
         public GameObject Money;
@@ -24,7 +24,7 @@ namespace Clone.Control {
         void Start()
         {
             timerToTakeItemFromPlayer = waitTimer;
-            move = GetComponent<Clone.Movement._CustomerMovement>();            
+            move = GetComponent<Sneaker.Movement._CustomerMovement>();            
         }
 
         private float t = 0.5f;
@@ -41,11 +41,15 @@ namespace Clone.Control {
 
 
         bool itemCodeGenrator;
-        float itemCodeGenratorTimer = 0.5f;
+        float itemCodeGenratorTimer = 1f;
         void Update()
         {
+
+
             CompleteTrading();
             takeCloth();
+            MoneyThrow();
+
             if (move.levelManager.OpenRacks.Count > 0 && !itemCodeGenrator && itemCodeGenratorTimer >= 0)                
             {
                 itemCodeGenratorTimer -= Time.deltaTime;
@@ -57,12 +61,38 @@ namespace Clone.Control {
             }
 
 
-            if(isTradingGoingOn && !moneySpwanned)
+
+        }
+
+        void MoneyThrow()
+        {
+            if (isTradingGoingOn && !moneySpwanned)
             {
-                print("MoneyThrown");
-                //Spwanning coin desable comment
-                //Instantiate(Money, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
-                StartCoroutine(activateAnim(0.2f));               
+                if (NeedItemCode == move.levelManager.Rack0.ClothIDNumber)
+                {
+                    move.levelManager.Rack0.limitToGiveCloth--;
+                    Instantiate(move.levelManager.Money, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                }
+
+                if (move.levelManager.Rack1 != null && NeedItemCode == move.levelManager.Rack1.ClothIDNumber)
+                {
+                    move.levelManager.Rack1.limitToGiveCloth--;
+                    Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                }
+
+                if (move.levelManager.PStationRack0 != null && NeedItemCode == move.levelManager.PStationRack0.ClothIDNumber)
+                {
+                    move.levelManager.PStationRack0.limitToGiveCloth--;
+                    Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                }
+
+                if (move.levelManager.PStationRack1 != null && NeedItemCode == move.levelManager.PStationRack1.ClothIDNumber)
+                {
+                    move.levelManager.PStationRack1.limitToGiveCloth--;
+                    Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                }
+
+                StartCoroutine(activateAnim(0.2f));
                 moneySpwanned = true;
             }
         }
@@ -72,7 +102,7 @@ namespace Clone.Control {
             move.anime.SetBool("tradeComplete", true);
             if (move.target != null)
             {
-                move.target.GetComponent<Clone.Movement.dottedCircle>().occupied = false;
+                move.target.GetComponent<Sneaker.Movement.dottedCircle>().occupied = false;
                 move.target = null;
             }
         }
@@ -82,7 +112,7 @@ namespace Clone.Control {
             {
                 timerToTakeItemFromPlayer -= Time.deltaTime;
                 if (timerToTakeItemFromPlayer <= 0)
-                {
+                {                    
                     move.anime.SetBool("tradeComplete", false);
                     move.tradeIsOver = true;
                     isTradeComplete = true;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Clone.Core {
+namespace Sneaker.Core {
     public class Cloths : MonoBehaviour
     {
         public int ClothNumber;
@@ -48,7 +48,7 @@ namespace Clone.Core {
         {
             if (!shoot)
             {
-                isTouched = Physics.CheckSphere(DC.position, 0.01f, ClothMask);
+                isTouched = Physics.CheckSphere(DC.position, 0.001f, ClothMask);
                 if (isTouched)
                     rb.isKinematic = true;
 
@@ -65,8 +65,8 @@ namespace Clone.Core {
             shoot = true;
             transform.parent = null;
 
-            if (Collector.GetComponent<Clone.Core.PlayerStackingAndUnstacking>() != null)
-                Collector.GetComponent<Clone.Core.PlayerStackingAndUnstacking>().ClothObject.Remove(gameObject);
+            if (Collector.GetComponent<Sneaker.Core.PlayerStackingAndUnstacking>() != null)
+                Collector.GetComponent<Sneaker.Core.PlayerStackingAndUnstacking>().ClothObject.Remove(gameObject);
 
            /* if (Collector.GetComponent<EmpStackingSystem>() != null)
                 Collector.GetComponent<EmpStackingSystem>().ClothObject.Remove(gameObject);*/

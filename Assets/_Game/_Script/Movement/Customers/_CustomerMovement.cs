@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Clone.Movement
+namespace Sneaker.Movement
 {
    public class _CustomerMovement : MonoBehaviour
     {
         [HideInInspector]public NavMeshAgent agent;
         [HideInInspector]public float Rotate;
         
-        public Clone.Core._LevelManager levelManager;
+        public Sneaker.Core._LevelManager levelManager;
         private float turnSmoothVelocity;
         public Transform target;
         public Transform end;
@@ -31,7 +31,7 @@ namespace Clone.Movement
         
         void Update()
         {
-            if (target == null && !GetComponent<Clone.Control._CustomerControl>().isTradingGoingOn)
+            if (target == null && !GetComponent<Sneaker.Control._CustomerControl>().isTradingGoingOn)
                 targetSet();
             move();
         }
@@ -46,7 +46,7 @@ namespace Clone.Movement
                 transform.rotation = Quaternion.Euler(0, angle, 0);
             }
 
-            if (!tradeIsOver && !GetComponent<Clone.Control._CustomerControl>().isTradingGoingOn)
+            if (!tradeIsOver && !GetComponent<Sneaker.Control._CustomerControl>().isTradingGoingOn)
             {
                 agent.SetDestination(target.position);                
             }
