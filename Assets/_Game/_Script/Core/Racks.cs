@@ -120,6 +120,7 @@ namespace Sneaker.Core
         public void whenPlayerIsOnRack()
         {
             FindObjectOfType<Sneaker.Core.AudioManager>().source.PlayOneShot(FindObjectOfType<Sneaker.Core.AudioManager>().Unlock, 1f);
+            FindObjectOfType<SAVE>().Save = 0;
             RackPrice.gameObject.SetActive(false);
             StoreGraphics.SetActive(true);
             //PurchaseGraphics.GetComponent<MeshRenderer>().enabled = false;

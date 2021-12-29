@@ -10,14 +10,14 @@ public class RackColliderActivator : MonoBehaviour
 
     private void Start()
     {
-        if(FindObjectOfType<Sneaker.Core.GameManager>().Level>0 || isColliderActivate)
+        if(FindObjectOfType<Sneaker.Core.GameManager>().Level > 0 || isColliderActivate)
         {
             col.enabled = true;
         }
     }
     void Update()
     {
-        if (!isColliderActivate)
+        if (!isColliderActivate && FindObjectOfType<Sneaker.Core.GameManager>().Level <= 0)
         {
             col.enabled = false;
         }

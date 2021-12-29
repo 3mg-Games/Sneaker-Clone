@@ -70,6 +70,7 @@ namespace Sneaker.Core
             if(isExpansion && !isExpanded)
             {
                 FindObjectOfType<AudioManager>().source.PlayOneShot(FindObjectOfType<AudioManager>().Unlock);
+                FindObjectOfType<SAVE>().Save = 0;
                 LockedArea.SetActive(false);
                 UnlockedArea.SetActive(true);
                 for (int i = 0; i <= ColliderToDestroy.Length - 1; i++)

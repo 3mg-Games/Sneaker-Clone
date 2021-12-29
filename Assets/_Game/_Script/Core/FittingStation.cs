@@ -50,7 +50,7 @@ namespace Sneaker.Core
             if(!isStoreOpened && isStationOpen)
             {
                 FindObjectOfType<AudioManager>().source.PlayOneShot(FindObjectOfType<AudioManager>().Unlock);
-
+                FindObjectOfType<SAVE>().Save = 0;
                 if (poofEffect != null)
                     poofEffect.gameObject.SetActive(true);
 
