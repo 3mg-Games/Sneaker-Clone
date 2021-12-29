@@ -16,4 +16,11 @@ public class SelfDestroy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void Update()
+    {
+        if (gm.Level > 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

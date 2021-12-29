@@ -152,7 +152,7 @@ namespace Sneaker.Core
                 cash.SetActive(false);
                 LevelUpBannaer.SetActive(true);
                 MoneyAdded.text = "Unlocked";
-                LevelCount.text = (Level + 1).ToString();
+                LevelCount.text = (Level + 2).ToString();
             }
             else
             {
@@ -161,7 +161,7 @@ namespace Sneaker.Core
                 LevelUpBannaer.SetActive(true);
                 cash.SetActive(true);
                 MoneyAdded.text = "+"+bonus().ToString();
-                LevelCount.text = (Level + 1).ToString();
+                LevelCount.text = (Level + 2).ToString();
             }
             
             Level += 1;            
