@@ -20,11 +20,14 @@ namespace Sneaker.Control {
         public bool isPlayerNear;
         public bool clothTookFromPlayer;
         public bool isTradeComplete;
+        public bool DummyCustomer;
         [HideInInspector] public bool moneySpwanned;
+        private Sneaker.Core.GameManager gm;
         void Start()
         {
             timerToTakeItemFromPlayer = waitTimer;
-            move = GetComponent<Sneaker.Movement._CustomerMovement>();            
+            move = GetComponent<Sneaker.Movement._CustomerMovement>();
+            gm = FindObjectOfType<Sneaker.Core.GameManager>();
         }
 
         private float t = 0.5f;
@@ -50,7 +53,7 @@ namespace Sneaker.Control {
             takeCloth();
             MoneyThrow();
 
-            if (move.levelManager.OpenRacks.Count > 0 && !itemCodeGenrator && itemCodeGenratorTimer >= 0)                
+            if (!DummyCustomer && move.levelManager.OpenRacks.Count > 0 && !itemCodeGenrator && itemCodeGenratorTimer >= 0)                
             {
                 itemCodeGenratorTimer -= Time.deltaTime;
                 if (itemCodeGenratorTimer <= 0)
@@ -59,9 +62,6 @@ namespace Sneaker.Control {
                     itemCodeGenrator = true;
                 }
             }
-
-
-
         }
 
         void MoneyThrow()
@@ -148,8 +148,10 @@ namespace Sneaker.Control {
         {
             if (other.gameObject.CompareTag("Slot") && move.agent.velocity.magnitude<=0)
             {
+                if(gm.Level>0)
+                    transform.rotation = Quaternion.Euler(transform.eulerAngles.x, move.Rotate, transform.eulerAngles.x);
+
                 move.isRechedStation = true;
-                transform.rotation = Quaternion.Euler(transform.eulerAngles.x, move.Rotate, transform.eulerAngles.x);
             }
         }
     }

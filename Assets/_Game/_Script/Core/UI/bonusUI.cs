@@ -8,6 +8,7 @@ namespace Sneaker.Core
     {
         [HideInInspector] public int amount;
         private AudioManager audio;
+        public GameObject LevelUP;
         void Start()
         {
             audio = FindObjectOfType<AudioManager>();
@@ -22,7 +23,10 @@ namespace Sneaker.Core
         public void DesableUI()
         {
             if (this.gameObject.activeSelf)
+            {
                 this.gameObject.SetActive(false);
+                LevelUP.SetActive(false);
+            }
         }
         public void addMoney()
         {

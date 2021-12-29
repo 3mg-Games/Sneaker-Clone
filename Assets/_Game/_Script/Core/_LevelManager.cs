@@ -12,12 +12,14 @@ namespace Sneaker.Core
         public Transform spwanPos;
         public Transform EndPos;
         public GameObject Female1;
+
         public GameObject Money;
         public GameObject Money1;
 
         [Header("Rack Data")]
         public Racks Rack0;
         public Racks Rack1;
+
         public Sneaker.Control.ProcessingStationRack PStationRack0;
         public Sneaker.Control.ProcessingStationRack PStationRack1;
 
@@ -34,15 +36,20 @@ namespace Sneaker.Core
         [Header("Racks Cloth UI")]
         public Sprite RackCloth0;
         public Sprite RackCloth1;
+
         public Sprite RackCloth2;
         public Sprite RackCloth3;
 
         public float spwanTimer = 2;
+
+        private GameManager gm;
         void Start()
         {
             spwnner = spwanTimer;
+            gm = FindObjectOfType<GameManager>();
         }
 
+        public Tutorial t;
         void Update()
         {
             if (this.gameObject.activeSelf && !FindObjectOfType<GameManager>().SectionsList.Contains(this.gameObject))
@@ -63,13 +70,22 @@ namespace Sneaker.Core
 
             if (StationPosition.Count > 0) 
             {
-                spwnCustomers();
-
-
+                try
+                {
+                    if (t != null &&  t.CustomerServing|| gm.Level > 0)
+                        spwnCustomers();
+                    if (t == null)
+                    {
+                        spwnCustomers();
+                    }
+                }
+                catch
+                {
+                    spwnCustomers();
+                }
 
                 //StartCoroutine(CustomerSpawnnerTimer(5));
-            }
-            
+            }            
         }
 
         float spwnner;

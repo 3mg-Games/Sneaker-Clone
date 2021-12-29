@@ -19,6 +19,12 @@ namespace Sneaker.Core
         public TextMeshProUGUI SectionCount;
         public TextMeshProUGUI ProcessingStation;
 
+        [Header("Level Up")]
+        public GameObject LevelUpBannaer;
+        public GameObject cash;
+        public TextMeshProUGUI LevelCount;
+        public TextMeshProUGUI MoneyAdded;
+
         [Header("Leveling System")]
         public GameObject customerUI;
         public GameObject levelUpdateButton;
@@ -42,8 +48,10 @@ namespace Sneaker.Core
         void Start()
         {
             levelUpdateButton.SetActive(false);
+            LevelUpBannaer.SetActive(false);
             bonusUI.SetActive(false);
             lockedSectionIcon.SetActive(false);
+            maxCustomerToServe = MaxCustomerCount();
         }
 
         void Update()
@@ -51,10 +59,22 @@ namespace Sneaker.Core
             customUI();
             moneyCounter();
             levelStatus();
-            if(!GameplayPause)
+            stackingClothLimit();
+            if (!GameplayPause)
                 levelingSystem();
         }
 
+        public void stackingClothLimit()
+        {
+            if(Level ==0 || Level <= 0)
+            {
+                PlayerClothCollectionLimit = 8;
+            }
+            if (Level > 0)
+            {
+                PlayerClothCollectionLimit = 40;
+            }
+        }
         public void customUI()
         {
             FittingStation.text = FittingStationList.Count.ToString();
@@ -78,13 +98,13 @@ namespace Sneaker.Core
         {
             if (Level == 0)
             {
-                currentLevelCount.text = (Level + 1).ToString();
+                currentLevelCount.text = (Level + 2).ToString();
                 lastLevelCount.text = (Level + 1).ToString();
             }
             if (Level >= 1)
             {
-                currentLevelCount.text = (Level + 1).ToString();
-                lastLevelCount.text = Level.ToString();
+                currentLevelCount.text = (Level + 2).ToString();
+                lastLevelCount.text = (Level+1).ToString();
             }
 
             if(currentServedCount >= maxCustomerToServe)
@@ -129,21 +149,59 @@ namespace Sneaker.Core
                 //bonusUI.GetComponent<bonusUI>().amount = bonus();
                 lockedSectionIcon.SetActive(false);
                 bonusUI.SetActive(false);
+                cash.SetActive(false);
+                LevelUpBannaer.SetActive(true);
+                MoneyAdded.text = "Unlocked";
+                LevelCount.text = (Level + 1).ToString();
             }
             else
             {
                 bonusUI.GetComponent<bonusUI>().amount = bonus();
                 bonusUI.SetActive(true);
+                LevelUpBannaer.SetActive(true);
+                cash.SetActive(true);
+                MoneyAdded.text = "+"+bonus().ToString();
+                LevelCount.text = (Level + 1).ToString();
             }
             
-            Level += 1;
+            Level += 1;            
             GetComponent<SectionUnlocker>().unlockSection();
             currentServedCount -= maxCustomerToServe;
-            maxCustomerToServe = maxCustomerToServe * 2;
+            maxCustomerToServe = MaxCustomerCount();
+            FindObjectOfType<Tutorial>().resetUI();
             levelUpdateButton.GetComponent<Animator>().Play("OUT");
             
         }
+        int custCount;
+        public int MaxCustomerCount()
+        {
+            if (Level == 0)
+                custCount = 11;
+            if (Level == 1)
+                custCount = 48;
+            if (Level == 2)
+                custCount = 80;
+            if (Level == 3)
+                custCount = 90;
+            if (Level == 4)
+                custCount = 60;
+            if (Level == 5)
+                custCount = 70;
+            if (Level == 6)
+                custCount = 60;
+            if (Level == 7)
+                custCount = 50;
+            if (Level == 8)
+                custCount = 40;
+            if (Level == 9)
+                custCount = 60;
+            if (Level == 10)
+                custCount = 80;
+            if (Level >= 11)
+                custCount = 110;
 
+            return custCount;
+        }
         public int bonus()
         {
             if (Level == 0)
