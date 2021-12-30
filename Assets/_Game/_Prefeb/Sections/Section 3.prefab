@@ -5544,13 +5544,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081393252852099396}
-  m_LocalRotation: {x: -0, y: -0, z: 0.23065959, w: -0.97303456}
+  m_LocalRotation: {x: 0, y: 0, z: -0.49242353, w: 0.8703557}
   m_LocalPosition: {x: -4.899996, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.4}
   m_Children: []
   m_Father: {fileID: 920306503084313346}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -59}
 --- !u!212 &1927885047622691305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7584,13 +7584,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151670428846164482}
-  m_LocalRotation: {x: 0.64085644, y: 0.29883623, z: -0.29883623, w: 0.64085644}
+  m_LocalRotation: {x: 0.61543447, y: 0.34819603, z: -0.34819603, w: 0.61543447}
   m_LocalPosition: {x: 0, y: 0, z: -2.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151670427995564601}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 50, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -59}
 --- !u!212 &1151670428846164508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9592,13 +9592,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151670429399028331}
-  m_LocalRotation: {x: 0.64085644, y: 0.29883623, z: -0.29883623, w: 0.64085644}
+  m_LocalRotation: {x: 0.61543447, y: 0.34819603, z: -0.34819603, w: 0.61543447}
   m_LocalPosition: {x: 0, y: 0, z: -2.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151670428107900579}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 50, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -59}
 --- !u!212 &1151670429399028325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47148,6 +47148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 3000
       objectReference: {fileID: 0}
@@ -47257,6 +47262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -47548,6 +47558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 6000
       objectReference: {fileID: 0}
@@ -47657,6 +47672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -47789,6 +47809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -48175,6 +48200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 9000
       objectReference: {fileID: 0}
@@ -48464,6 +48494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -48893,6 +48928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 6000
       objectReference: {fileID: 0}
@@ -49002,6 +49042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -49137,6 +49182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 9000
       objectReference: {fileID: 0}
@@ -49249,6 +49299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 3000
       objectReference: {fileID: 0}
@@ -49358,6 +49413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -49493,6 +49553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 6000
       objectReference: {fileID: 0}
@@ -49622,6 +49687,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -49757,6 +49827,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 9000
       objectReference: {fileID: 0}
@@ -49866,6 +49941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}

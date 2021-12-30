@@ -47,10 +47,12 @@ namespace FashionM.Core
             if (collision.gameObject.CompareTag("Player") && !GetComponent<Rigidbody>().isKinematic)
             {
                 StoreToPlayer = true;
+                //audioManager.source.PlayOneShot(audioManager.CollectingMoney);
                 if (audioSource != null)
                     audioSource.Play();
                 //GetComponent<Rigidbody>().isKinematic = true;
                 GameObject.FindGameObjectWithTag("GameManager").GetComponent<Sneaker.Core.GameManager>().MaxMoney += Coins;
+
                 //GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().dailyAmount += Coins;
                 Destroy(this.gameObject, 0.15f);
             }
@@ -65,11 +67,14 @@ namespace FashionM.Core
             if (other.gameObject.CompareTag("Player") && GetComponent<Rigidbody>().isKinematic)
             {
                 StoreToPlayer = true;
+
+
                 if(audioSource !=null)
                     audioSource.Play();
                 //audioManager.source.PlayOneShot(audioManager.CollectingMoney);
                 //GetComponent<Rigidbody>().isKinematic = true;
                 GameObject.FindGameObjectWithTag("GameManager").GetComponent<Sneaker.Core.GameManager>().MaxMoney += Coins;
+                
                 //GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().dailyAmount += Coins;
                 Destroy(this.gameObject, 0.15f);
             }

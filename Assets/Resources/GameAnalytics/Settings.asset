@@ -26,21 +26,21 @@ MonoBehaviour:
   UserMessagesFailed: 0
   CustomArea: 
   gameKey:
-  - 
+  - fc3112ffca4f4d3a48587e9beeb1813b
   secretKey:
-  - 
+  - d72c4fb7229fbf4116ea2d1e7bb9bc9be36d246f
   Build:
   - 0.1
   SelectedPlatformOrganization:
-  - 
+  - 3MG Productions
   SelectedPlatformStudio:
-  - 
+  - 3MG Productions
   SelectedPlatformGame:
-  - 
-  SelectedPlatformGameID: ffffffff
+  - Fashion Empire
+  SelectedPlatformGameID: 4bbb0200
   SelectedOrganization: 01000000
   SelectedStudio: 01000000
-  SelectedGame: 00000000
+  SelectedGame: 03000000
   NewVersion: 
   Changes: 
   SignUpOpen: 0

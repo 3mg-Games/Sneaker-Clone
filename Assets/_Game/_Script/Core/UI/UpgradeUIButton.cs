@@ -20,5 +20,10 @@ namespace Sneaker.Core
         {
             audio.source.PlayOneShot(audio.UpgradeButton);
         }
+
+        public void SendProgressionData()
+        {
+            FindObjectOfType<GASetup>().LevelComplete(FindObjectOfType<Sneaker.Core.GameManager>().Level + 1);
+        }
     }
 }

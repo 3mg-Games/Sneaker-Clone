@@ -8,8 +8,18 @@ namespace Sneaker.Core
 {
     public class GameManager : MonoBehaviour
     {
+
+        [Header("Money Counter")]
+        /*public float animationTime = 1.5f;*/
+
+        /*[SerializeField] private float desiredNumber;
+        [SerializeField]private float initialNumber;
+        [SerializeField]private float currentNumber;*/
+
         public int MaxMoney;
-        private int CurrentMoney;
+        public float MoneyCounterSpeed;
+        private float CurrentMoney;
+
         public int PlayerClothCollectionLimit = 10;
 
         public bool GameplayPause;
@@ -38,6 +48,7 @@ namespace Sneaker.Core
 
         public int currentServedCount;
         public float levelIncrementalSpeed;
+        public float levelDecreaseSpeed;
         public int maxCustomerToServe;
         public int Level;
 
@@ -47,15 +58,17 @@ namespace Sneaker.Core
         private int bonusAmount;
         void Start()
         {
+            CurrentMoney = MaxMoney;
             levelUpdateButton.SetActive(false);
             LevelUpBannaer.SetActive(false);
             bonusUI.SetActive(false);
             lockedSectionIcon.SetActive(false);
             maxCustomerToServe = MaxCustomerCount();
+            
         }
 
         void Update()
-        {
+        {            
             customUI();
             moneyCounter();
             levelStatus();
@@ -83,16 +96,24 @@ namespace Sneaker.Core
         }
         public void moneyCounter()
         {
-            MaxMoney = (int)Mathf.Clamp(MaxMoney, 0f, Mathf.Infinity);
 
-            if (MaxMoney < CurrentMoney)
-                CurrentMoney -= 1;
+            MaxMoney = (int)Mathf.Clamp(MaxMoney, 0, Mathf.Infinity);
+            
 
-            if (MaxMoney > CurrentMoney)
-                CurrentMoney += 1;
-            MoneyCount.text = CurrentMoney.ToString();
+            if (CurrentMoney <= MaxMoney)
+            {
+                CurrentMoney += MoneyCounterSpeed;
+                if (CurrentMoney >= MaxMoney)
+                    CurrentMoney = MaxMoney;
+            }
+            if (CurrentMoney >= MaxMoney)
+            {
+                CurrentMoney -= MoneyCounterSpeed;
+                if (CurrentMoney <= MaxMoney)
+                    CurrentMoney = MaxMoney;
+            }
+            MoneyCount.text = CurrentMoney.ToString("N0");
         }
-
         
         public void levelStatus()
         {
@@ -126,13 +147,23 @@ namespace Sneaker.Core
             levelSilder.maxValue = maxCustomerToServe;
 
 
-            if(levelIncrementor <= currentServedCount )
+            if(levelIncrementor < currentServedCount )
             {
                 levelIncrementor += levelIncrementalSpeed * Time.deltaTime;
+                if (levelIncrementor >= currentServedCount)
+                    levelIncrementor = currentServedCount;
             }
-            if (currentServedCount <= levelIncrementor)
+
+           if (levelIncrementor > currentServedCount)
             {
-                levelIncrementor -= levelIncrementalSpeed * Time.deltaTime;
+                levelIncrementor -= levelDecreaseSpeed * Time.deltaTime;
+                if (levelIncrementor <= currentServedCount)
+                    levelIncrementor = currentServedCount;
+            }
+
+            if(levelIncrementor == currentServedCount)
+            {
+                levelIncrementor = currentServedCount;
             }
 
             levelSilder.value = levelIncrementor;
@@ -162,8 +193,8 @@ namespace Sneaker.Core
                 cash.SetActive(true);
                 MoneyAdded.text = "+"+bonus().ToString();
                 LevelCount.text = (Level + 2).ToString();
-            }
-            
+            }            
+            FindObjectOfType<SAVE>().Save = 0;
             Level += 1;            
             GetComponent<SectionUnlocker>().unlockSection();
             currentServedCount -= maxCustomerToServe;

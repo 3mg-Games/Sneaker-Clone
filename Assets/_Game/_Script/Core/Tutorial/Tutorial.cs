@@ -53,6 +53,9 @@ namespace Sneaker.Core
         public Sneaker.Control._CustomerControl con4;
         public Sneaker.Control.ProcessingStationRack pSR;
 
+        public bool cinematic1;
+        public bool cinematic2;
+        public bool tutorial2Over;
         void Start()
         {
             TutorialSetOnce();
@@ -69,6 +72,8 @@ namespace Sneaker.Core
         {
             resetUI();
             Rack2.GetComponent<RackColliderActivator>().isColliderActivate = false;
+            PlayerArrow.SetActive(false);
+            RackArrow1.SetActive(false);
             RackArrow2.SetActive(false);
             CustomerArrow1.SetActive(false);
             CustomerArrow2.SetActive(false);
@@ -76,7 +81,6 @@ namespace Sneaker.Core
         }
         public void TutorialSetOnce1()
         {
-
             SRack1.SetActive(false);
             CustomerArrow3.SetActive(false);
             CustomerArrow4.SetActive(false);
@@ -106,9 +110,14 @@ namespace Sneaker.Core
                 Hand.SetActive(true);
                 Glow.SetActive(true);
             }
-            if(FindObjectOfType<GameManager>().Level >= 5 && FindObjectOfType<GameManager>().Level <= 5)
+            if(FindObjectOfType<GameManager>().Level >= 5 && FindObjectOfType<GameManager>().Level <= 5 && !tutorial2Over)
             {
                 tutorial_3();
+            }
+            if(FindObjectOfType<GameManager>().Level >= 6)
+            {
+                TutorialSetOnce();
+                TutorialSetOnce1();
             }
 
             tutorial_2();
@@ -117,6 +126,8 @@ namespace Sneaker.Core
         {
             if (psau.ClothObject.Count <= 0)
             {
+                PlayerArrow.SetActive(true);
+                RackArrow1.SetActive(true);
                 PlayerArrow.transform.LookAt(new Vector3(RackArrow1.transform.position.x, PlayerArrow.transform.position.y, RackArrow1.transform.position.z));
             }
 
@@ -165,12 +176,13 @@ namespace Sneaker.Core
         }
         public void tutorial_2()
         {
-            if (fs1.isStationOpen && fs.isStationOpen)
+            if (fs1.isStationOpen && fs.isStationOpen && !cinematic1)
             {
                 if (!Section2.activeSelf && !isCameraMoved)
                 {
                     FindObjectOfType<GameManager>().GameplayPause = true;
                     CamAnime.Play("Second");
+                    StartCoroutine(cin1(0.5f));
                     isCameraMoved = true;
                 }
             }
@@ -203,10 +215,11 @@ namespace Sneaker.Core
                 PackingStationArrow.SetActive(true);
                 PlayerArrow.transform.LookAt(new Vector3(PackingStationArrow.transform.position.x, PlayerArrow.transform.position.y, PackingStationArrow.transform.position.z));
             }
-            if(con3.clothTookFromPlayer && !c2)
+            if(con3.clothTookFromPlayer && !c2 && !cinematic2)
             {
                 FindObjectOfType<GameManager>().GameplayPause = true;
                 CamAnime.Play("4");
+                StartCoroutine(cin2(0.5f));
                 c2 = true;
             }
             if(pSR.isPlayerNear && !c3)
@@ -225,7 +238,20 @@ namespace Sneaker.Core
                 CustomerArrow4.SetActive(false);
                 PackingStationArrow.SetActive(false);
                 PlayerArrow.SetActive(false);
+                tutorial2Over = true;
             }
+        }
+
+
+        IEnumerator cin1(float t)
+        {
+            yield return new WaitForSeconds(t);
+            cinematic1 = true;
+        }
+        IEnumerator cin2(float t)
+        {
+            yield return new WaitForSeconds(t);
+            cinematic2 = true;
         }
     }
 }

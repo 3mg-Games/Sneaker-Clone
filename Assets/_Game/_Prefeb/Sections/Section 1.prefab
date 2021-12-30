@@ -279,7 +279,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278203821
+    rgba: 4278192925
   m_fontColor: {r: 0.11320752, g: 0.041520476, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278203821
+    rgba: 4278192925
   m_fontColor: {r: 0.11320752, g: 0.041520476, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -995,8 +995,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536591077}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.07, y: 0.2246, z: -15.62}
-  m_LocalScale: {x: 5.841988, y: 0.44936055, z: 0.55653656}
+  m_LocalPosition: {x: 4.4669, y: 0.2246, z: -15.62}
+  m_LocalScale: {x: 5.841988, y: 0.44936055, z: 3.490898}
   m_Children: []
   m_Father: {fileID: 1751571758669721387}
   m_RootOrder: 7
@@ -1983,6 +1983,101 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3710652624261060222, guid: 8681d04ab7e032848a20a13dac07c486, type: 3}
+--- !u!1 &1258282654850058144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7877468425280442788}
+  - component: {fileID: 8173091711700913297}
+  - component: {fileID: 2210466366418516594}
+  - component: {fileID: 5338681306332522571}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7877468425280442788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258282654850058144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.25, y: -0.25, z: -8.2208}
+  m_LocalScale: {x: 27.699999, y: 0.5, z: 22.949898}
+  m_Children: []
+  m_Father: {fileID: 1751571758129186879}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8173091711700913297
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258282654850058144}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2210466366418516594
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258282654850058144}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6759e246a4127cb4db4ce35b5781a173, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5338681306332522571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258282654850058144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1369767712729698933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,8 +2422,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279576376
+  m_fontColor: {r: 0.21960784, g: 0.15294118, b: 0.08235294, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4205,8 +4300,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.868327, y: 0.4756317, z: 4.6511574}
-  m_Center: {x: 2.179562, y: -0.26218414, z: -3.1334457}
+  m_Size: {x: 10.331255, y: 0.4756317, z: 5.8574905}
+  m_Center: {x: 2.2549582, y: -0.26218414, z: -3.1334457}
 --- !u!114 &1751571757757026093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,13 +4351,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751571757781107742}
-  m_LocalRotation: {x: 0.64085644, y: 0.29883623, z: -0.29883623, w: 0.64085644}
+  m_LocalRotation: {x: 0.61543447, y: 0.34819603, z: -0.34819603, w: 0.61543447}
   m_LocalPosition: {x: 0, y: 0.0000000074506, z: -2.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1751571756837932236}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 50, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -59}
 --- !u!212 &1751571757781107712
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5446,6 +5541,7 @@ Transform:
   m_Children:
   - {fileID: 1751571758140752019}
   - {fileID: 1751571758727909819}
+  - {fileID: 7877468425280442788}
   m_Father: {fileID: 1751571758180433010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5476,8 +5572,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751571758140752016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: -0.25, z: -4.4973}
-  m_LocalScale: {x: 27.699999, y: 0.5, z: 30.397215}
+  m_LocalPosition: {x: 0.25, y: -0.25, z: 6.9758}
+  m_LocalScale: {x: 27.699999, y: 0.5, z: 7.4521666}
   m_Children: []
   m_Father: {fileID: 1751571758129186879}
   m_RootOrder: 0
@@ -5509,7 +5605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6759e246a4127cb4db4ce35b5781a173, type: 2}
+  - {fileID: 2100000, guid: 400fcaba6f2860d479588f7ca0b641d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6886,8 +6982,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3ffc45422ab85b48b87f7e6d8c0af52, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c4f0f41df39dcc1408948adf8f644ab3, type: 3}
+  m_Color: {r: 0.6313726, g: 0.5647059, b: 0.45098042, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7094,7 +7190,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3ffc45422ab85b48b87f7e6d8c0af52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4f0f41df39dcc1408948adf8f644ab3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7213,8 +7309,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280830311
-  m_fontColor: {r: 0.4056604, g: 0.2868932, b: 0.1549929, a: 1}
+    rgba: 4279510839
+  m_fontColor: {r: 0.21698111, g: 0.15118496, b: 0.07880917, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9192,8 +9288,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280830311
-  m_fontColor: {r: 0.4056604, g: 0.2868932, b: 0.1549929, a: 1}
+    rgba: 4279510839
+  m_fontColor: {r: 0.21698111, g: 0.15118496, b: 0.07880917, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10191,6 +10287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 330
       objectReference: {fileID: 0}
@@ -10206,6 +10307,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &2466301945648577037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135339339608669349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2466301945648577034 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -10218,12 +10325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2466301945648577037 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 1135339339608669349}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1462673223443915379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10320,6 +10421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -10451,6 +10557,11 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: MoneyReduceSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -10587,15 +10698,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
---- !u!4 &6648537115210423884 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4902885610343828796, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 1751571756871914352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3870083755493250520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751571756871914352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6648537115210423884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4902885610343828796, guid: 0d8bc1c16433183408d4d6762ab94d98,
     type: 3}
   m_PrefabInstance: {fileID: 1751571756871914352}
   m_PrefabAsset: {fileID: 0}
@@ -10874,15 +10985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69aa9f1dd2b44fe44831b5af919be134, type: 3}
---- !u!1 &1481610517626131917 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 69aa9f1dd2b44fe44831b5af919be134,
-    type: 3}
-  m_PrefabInstance: {fileID: 1751571756933163164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2289073562476531575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 69aa9f1dd2b44fe44831b5af919be134,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751571756933163164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1481610517626131917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 69aa9f1dd2b44fe44831b5af919be134,
     type: 3}
   m_PrefabInstance: {fileID: 1751571756933163164}
   m_PrefabAsset: {fileID: 0}
@@ -11245,15 +11356,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
---- !u!4 &6648537114893690748 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4902885610559122097, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 1751571757275090381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3870083755895376741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751571757275090381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6648537114893690748 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4902885610559122097, guid: 0d8bc1c16433183408d4d6762ab94d98,
     type: 3}
   m_PrefabInstance: {fileID: 1751571757275090381}
   m_PrefabAsset: {fileID: 0}
@@ -11332,6 +11443,11 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: MoneyReduceSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -11565,6 +11681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MoneyReduceSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -11905,15 +12026,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 269c380eb426dd74fb0d9cef40063dd1, type: 3}
---- !u!1 &2185849621516574859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 440059315317121694, guid: 269c380eb426dd74fb0d9cef40063dd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1751571758491550229}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2185849621516574852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 440059315317121681, guid: 269c380eb426dd74fb0d9cef40063dd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751571758491550229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2185849621516574859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 440059315317121694, guid: 269c380eb426dd74fb0d9cef40063dd1,
     type: 3}
   m_PrefabInstance: {fileID: 1751571758491550229}
   m_PrefabAsset: {fileID: 0}
@@ -12033,6 +12154,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 30
       objectReference: {fileID: 0}
@@ -12048,6 +12174,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &3870083755156970991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751571758550244167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3870083755156970984 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -12060,12 +12192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &3870083755156970991 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 1751571758550244167}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1751571758551964280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12394,6 +12520,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 240
       objectReference: {fileID: 0}
@@ -12409,12 +12540,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
---- !u!4 &3961480230004580139 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 1946004565367036291}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3961480230004580140 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -12427,6 +12552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3961480230004580139 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1946004565367036291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2038331455446149224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12526,6 +12657,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 270
       objectReference: {fileID: 0}
@@ -12541,6 +12677,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &3580927095528042176 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 2038331455446149224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3580927095528042183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -12553,12 +12695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &3580927095528042176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 2038331455446149224}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2663701636793239256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12658,6 +12794,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 210
       objectReference: {fileID: 0}
@@ -12673,12 +12814,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
---- !u!4 &652114947113369712 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 2663701636793239256}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &652114947113369719 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -12691,6 +12826,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &652114947113369712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 2663701636793239256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2701151777652012355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12790,6 +12931,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 270
       objectReference: {fileID: 0}
@@ -12805,6 +12951,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &614726689213559787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 2701151777652012355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &614726689213559788 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -12817,12 +12969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &614726689213559787 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 2701151777652012355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4610856304656978710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12902,6 +13048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 180
       objectReference: {fileID: 0}
@@ -12917,6 +13068,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &1298889307274696126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 4610856304656978710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1298889307274696121 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -12929,12 +13086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1298889307274696126 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 4610856304656978710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5086872044996289354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13014,6 +13165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 240
       objectReference: {fileID: 0}
@@ -13029,6 +13185,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &7738216309921687010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 5086872044996289354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7738216309921687013 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -13041,12 +13203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7738216309921687010 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 5086872044996289354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5141177954868776334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13126,6 +13282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 300
       objectReference: {fileID: 0}
@@ -13141,6 +13302,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &7683910124634606374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 5141177954868776334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7683910124634606369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -13153,12 +13320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7683910124634606374 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 5141177954868776334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6699101874736793657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13238,6 +13399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
+      propertyPath: MoneyCounterSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
+        type: 3}
       propertyPath: MaxMoneyNeededToUnlock
       value: 180
       objectReference: {fileID: 0}
@@ -13253,6 +13419,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8bc1c16433183408d4d6762ab94d98, type: 3}
+--- !u!4 &8145996022553595537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
+    type: 3}
+  m_PrefabInstance: {fileID: 6699101874736793657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8145996022553595542 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
@@ -13265,9 +13437,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd48d467c828a444893f2f475c829d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &8145996022553595537 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3313410795820959400, guid: 0d8bc1c16433183408d4d6762ab94d98,
-    type: 3}
-  m_PrefabInstance: {fileID: 6699101874736793657}
-  m_PrefabAsset: {fileID: 0}

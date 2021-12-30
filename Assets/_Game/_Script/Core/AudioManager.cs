@@ -8,6 +8,7 @@ namespace Sneaker.Core
     {
         public AudioSource source;
         public AudioClip GivingToCustomer;
+        public AudioClip CollectingMoney;
         public AudioClip MoneyCounting;
         public AudioClip Unlock;
         public AudioClip UpgradeButton;

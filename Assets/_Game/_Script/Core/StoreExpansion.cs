@@ -69,6 +69,7 @@ namespace Sneaker.Core
 
             if(isExpansion && !isExpanded)
             {
+                FindObjectOfType<SAVE>().Save = 0;
                 FindObjectOfType<AudioManager>().source.PlayOneShot(FindObjectOfType<AudioManager>().Unlock);
                 FindObjectOfType<SAVE>().Save = 0;
                 LockedArea.SetActive(false);
@@ -93,6 +94,7 @@ namespace Sneaker.Core
                         {
                             MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
                             gm.MaxMoney -= MoneyReduceSpeed;
+                            gm.MoneyCounterSpeed = MoneyReduceSpeed;
                         }
                     }
                 }
@@ -105,7 +107,8 @@ namespace Sneaker.Core
                             {
                                 MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
                                 gm.MaxMoney -= MoneyReduceSpeed;
-                            }
+                            gm.MoneyCounterSpeed = MoneyReduceSpeed;
+                        }
                         }
                     }
 

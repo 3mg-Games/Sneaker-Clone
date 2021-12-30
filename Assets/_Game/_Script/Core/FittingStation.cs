@@ -9,22 +9,27 @@ namespace Sneaker.Core
     {
         private Sneaker.Core.GameManager gm;
 
+
         public TextMeshPro StationPrice;
         public GameObject Mirror1, Mirror2, Circle1, Circle2,MoneySymbol;
         public ParticleSystem poofEffect;
         public int MaxMoneyNeededToUnlock;
-        public int MoneyReduceSpeed;
+        public int MoneyCounterSpeed;
+
 
         public bool isStationOpen;
 
         private bool isStoreOpened;
+
         private void Start()
         {
             gm = FindObjectOfType<Sneaker.Core.GameManager>();
 
             if (!isStationOpen)
             {
-                if(poofEffect != null)
+                FindObjectOfType<SAVE>().Save = 0;
+
+                if (poofEffect != null)
                     poofEffect.gameObject.SetActive(false);
 
                 Mirror1.SetActive(false);
@@ -38,7 +43,10 @@ namespace Sneaker.Core
         private void Update()
         {
             CheckStoreCondition();
+            
+            //moneyCounter();
             StationPrice.text = "$" + MaxMoneyNeededToUnlock.ToString();
+            /*gm.MaxMoney -= (int)(CurrentMoney - MaxMoneyNeededToUnlock);*/
         }
 
 
@@ -67,16 +75,18 @@ namespace Sneaker.Core
                 isStoreOpened = true;
             }
         }
+
         private void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
                 if (collision.gameObject.GetComponent<Sneaker.Movement._PlayerMovment>().direction.magnitude <= 0)
                 {
-                    if (MaxMoneyNeededToUnlock > 0 && gm.MaxMoney >= MoneyReduceSpeed && !isStationOpen)
-                    {
-                        MaxMoneyNeededToUnlock -= MoneyReduceSpeed;
-                        gm.MaxMoney -= MoneyReduceSpeed;                        
+                    if (MaxMoneyNeededToUnlock > 0  && gm.MaxMoney >= MoneyCounterSpeed && !isStationOpen)
+                    {                        
+                        MaxMoneyNeededToUnlock -= MoneyCounterSpeed;
+                        gm.MaxMoney -= MoneyCounterSpeed;
+                        gm.MoneyCounterSpeed = MoneyCounterSpeed;
                     }
                 }
             }

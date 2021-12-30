@@ -30,7 +30,8 @@ namespace Sneaker.Core
         }
         public void addMoney()
         {
-            FindObjectOfType<GameManager>().MaxMoney += amount;
+            FindObjectOfType<GameManager>().MaxMoney += amount;            
+
         }
         public void Upgrade()
         {

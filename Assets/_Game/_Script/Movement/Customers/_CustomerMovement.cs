@@ -72,8 +72,8 @@ namespace Sneaker.Movement
                     if (!levelManager.StationPosition[i].GetComponent<dottedCircle>().occupied)
                     {
                         target = levelManager.StationPosition[i].transform;
-                        target.GetComponent<dottedCircle>().occupied = true;
                         Rotate = target.GetComponent<dottedCircle>().Rotate;
+                        target.GetComponent<dottedCircle>().occupied = true;
                         break;
                     }
                     else

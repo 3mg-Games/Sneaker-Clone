@@ -22,6 +22,7 @@ public class GASetup : MonoBehaviour
     public void LevelComplete(int level)
     {
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, level.ToString("D4"));
+        print(level);
         print("LEVEL COMPLETE DATA SENT TO _GAME ANALYTICS_");
     }
 }

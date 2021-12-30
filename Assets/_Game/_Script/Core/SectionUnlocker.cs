@@ -27,21 +27,34 @@ namespace Sneaker.Core
         }
         IEnumerator unlock(float t)
         {
-            if (gm.Level >= UnlockLevel[0] && !Unlocked[0])
+            if (gm.Level >= UnlockLevel[0] )
             {
-                gm.GameplayPause = true;
-                CameraAnimation.Play("Second U");
+               
+                if(gm.Level == UnlockLevel[0] && !Unlocked[0])
+                {
+                    gm.GameplayPause = true;
+                    CameraAnimation.Play("Second U");
+                    FindObjectOfType<GASetup>().roomUnlocked(UnlockSection[0].transform);
+                    FindObjectOfType<SAVE>().Save = 0;
+                }
                 yield return new WaitForSeconds(t);
                 LockedSections[0].SetActive(false);
                 UnlockSection[0].SetActive(true);
+                
                 Unlocked[0] = true;
 
             }
 
-            if (gm.Level >= UnlockLevel[1] && !Unlocked[1])
+            if (gm.Level >= UnlockLevel[1])
             {
-                gm.GameplayPause = true;
-                CameraAnimation.Play("Third U");
+                
+                if(gm.Level == UnlockLevel[1] && !Unlocked[1])
+                {
+                    gm.GameplayPause = true;
+                    CameraAnimation.Play("Third U");
+                    FindObjectOfType<GASetup>().roomUnlocked(UnlockSection[1].transform);
+                    FindObjectOfType<SAVE>().Save = 0;
+                }
                 yield return new WaitForSeconds(t);
                 LockedSections[1].SetActive(false);
                 UnlockSection[1].SetActive(true);
