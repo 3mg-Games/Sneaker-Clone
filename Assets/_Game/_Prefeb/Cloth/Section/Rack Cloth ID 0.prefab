@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClothNumber: 0
-  DropSpeed: 25
+  DropSpeed: 10
   Collector: {fileID: 0}
   DC: {fileID: 4891580563917874183}
   ClothMask:

@@ -133,8 +133,7 @@ namespace Sneaker.Core
         public void GiveItemToPlayer()
         {
 
-            if (isPlayerNear && PlayerStackingAndUnstacking.ClothObject.Count <= gm.PlayerClothCollectionLimit-1 && limitToGiveCloth<= gm.PlayerClothCollectionLimit -5 && RackCloths.Count >0)
-            {
+            if (isPlayerNear && PlayerStackingAndUnstacking.ClothObject.Count <= gm.PlayerClothCollectionLimit-1 && limitToGiveCloth<= gm.PlayerClothCollectionLimit && RackCloths.Count >0)            {
                 giveItemToPlayer -= Time.deltaTime;
                 if (giveItemToPlayer <= 0)
                 {

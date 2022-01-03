@@ -73,15 +73,15 @@ namespace Sneaker.Core
                 try
                 {
                     if (t != null &&  t.CustomerServing|| gm.Level > 0)
-                        spwnCustomers();
+                        //spwnCustomers();
                     if (t == null)
                     {
-                        spwnCustomers();
+                        //spwnCustomers();
                     }
                 }
                 catch
                 {
-                    spwnCustomers();
+                    //spwnCustomers();
                 }
 
                 //StartCoroutine(CustomerSpawnnerTimer(5));

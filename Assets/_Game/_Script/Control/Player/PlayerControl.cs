@@ -29,8 +29,8 @@ namespace Sneaker.Control
         {
             if (other.gameObject.CompareTag("Customer") && PlayerStackingAndUnstacking.ClothObject.Count > 0 && !other.GetComponent<Sneaker.Control._CustomerControl>().clothTookFromPlayer && 
                 other.GetComponent<Sneaker.Control._CustomerControl>().move.isRechedStation )
-            {                
-               
+            {
+                Debug.LogError("Tag");
                 PlayerStackingAndUnstacking.RemoveCloth(other, other.GetComponent<Sneaker.Control._CustomerControl>().NeedItemCode, customerUISpwanOffset);
             }
 
@@ -46,7 +46,7 @@ namespace Sneaker.Control
             if (other.gameObject.CompareTag("Customer") && !gm.GameplayPause &&  PlayerStackingAndUnstacking.ClothObject.Count > 0 && !other.GetComponent<Sneaker.Control._CustomerControl>().clothTookFromPlayer &&
                 other.GetComponent<Sneaker.Control._CustomerControl>().move.isRechedStation)
             {
-               
+                Debug.LogError("Tag");
                 PlayerStackingAndUnstacking.RemoveCloth(other, other.GetComponent<Sneaker.Control._CustomerControl>().NeedItemCode, customerUISpwanOffset);
             }
 

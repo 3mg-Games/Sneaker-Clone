@@ -71,25 +71,25 @@ namespace Sneaker.Control {
                 if (NeedItemCode == move.levelManager.Rack0.ClothIDNumber)
                 {
                     move.levelManager.Rack0.limitToGiveCloth--;
-                    Instantiate(move.levelManager.Money, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                    //Instantiate(move.levelManager.Money, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
                 }
 
                 if (move.levelManager.Rack1 != null && NeedItemCode == move.levelManager.Rack1.ClothIDNumber)
                 {
                     move.levelManager.Rack1.limitToGiveCloth--;
-                    Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                    //Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
                 }
 
                 if (move.levelManager.PStationRack0 != null && NeedItemCode == move.levelManager.PStationRack0.ClothIDNumber)
                 {
                     move.levelManager.PStationRack0.limitToGiveCloth--;
-                    Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                    //Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
                 }
 
                 if (move.levelManager.PStationRack1 != null && NeedItemCode == move.levelManager.PStationRack1.ClothIDNumber)
                 {
                     move.levelManager.PStationRack1.limitToGiveCloth--;
-                    Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
+                    //Instantiate(move.levelManager.Money1, new Vector3(transform.position.x, transform.position.y + MoneyDropOffset, transform.position.z), Quaternion.identity);
                 }
 
                 StartCoroutine(activateAnim(0.2f));
@@ -148,9 +148,8 @@ namespace Sneaker.Control {
         {
             if (other.gameObject.CompareTag("Slot") && move.agent.velocity.magnitude<=0)
             {
-                if(gm.Level>0)
-                    transform.rotation = Quaternion.Euler(transform.eulerAngles.x, move.Rotate, transform.eulerAngles.x);
-
+                if(gm.Level>=1)
+                    //transform.rotation = Quaternion.Euler(transform.eulerAngles.x, move.Rotate, transform.eulerAngles.x);
                 move.isRechedStation = true;
             }
         }

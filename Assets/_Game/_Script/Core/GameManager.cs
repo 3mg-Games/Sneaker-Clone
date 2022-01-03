@@ -81,11 +81,11 @@ namespace Sneaker.Core
         {
             if(Level ==0 || Level <= 0)
             {
-                PlayerClothCollectionLimit = 8;
+                PlayerClothCollectionLimit = 1;
             }
             if (Level > 0)
             {
-                PlayerClothCollectionLimit = 40;
+                PlayerClothCollectionLimit = 1;
             }
         }
         public void customUI()

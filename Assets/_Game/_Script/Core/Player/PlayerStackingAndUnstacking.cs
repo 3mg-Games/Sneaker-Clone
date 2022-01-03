@@ -10,6 +10,7 @@ namespace Sneaker.Core
         public GameObject StackingPlace;
 
         public GameObject pooflEffect;
+        public GameObject poofEffect_1;
 
         [Range(0, 1)]
         public float PickupDileverVolume;
@@ -62,7 +63,8 @@ namespace Sneaker.Core
         public void addClothToStack(GameObject cloth, int num)
         {
             if (ClothObject.Count <= 0)
-            {                
+            {
+                poofEffect_1.SetActive(true);
                 GameObject o = Instantiate(cloth, StackingPlace.transform.position, Quaternion.identity);
                 o.transform.parent = StackingPlace.transform;
                  o.GetComponent<Cloths>().ClothNumber = num;
@@ -70,7 +72,8 @@ namespace Sneaker.Core
             }
 
             if (ClothObject.Count > 0)
-            {                
+            {
+                poofEffect_1.SetActive(true);
                 GameObject o = Instantiate(cloth, ClothObject[ClothObject.Count - 1].transform.position + new Vector3(0, 0.05f, 0), Quaternion.identity);
                 o.transform.parent = StackingPlace.transform;
                 o.GetComponent<Cloths>().ClothNumber = num;
@@ -101,7 +104,7 @@ namespace Sneaker.Core
                         ClothObject[i].GetComponent<Cloths>().throwCloth(other.gameObject.transform);
                         other.gameObject.GetComponent<Sneaker.Control._CustomerControl>().isPlayerNear = true;
                         other.gameObject.GetComponent<Sneaker.Control._CustomerControl>().clothTookFromPlayer = true;
-                        Instantiate(gm.customerUI, other.transform.position + customerUISpwanOffset, Quaternion.identity);
+                        //Instantiate(gm.customerUI, other.transform.position + customerUISpwanOffset, Quaternion.identity);
                         break;
                     }
 

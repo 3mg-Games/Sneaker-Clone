@@ -47,6 +47,9 @@ namespace Sneaker.Movement
         {
             float z = joystick.Vertical;
             float x = joystick.Horizontal;
+
+            z = Input.GetAxisRaw("Vertical");
+            x = Input.GetAxisRaw("Horizontal");
             direction = new Vector3(x, 0, z).normalized;
             anim.SetFloat("speed", Mathf.Abs(direction.magnitude));
             if (direction.magnitude > 0.1f)
