@@ -19,7 +19,7 @@ public class SaveAndLoad : MonoBehaviour
     {
         gm = FindObjectOfType<Sneaker.Core.GameManager>();
         data = SaveManager.Load();
-        LoadGame();
+        //LoadGame();
 
     }
 

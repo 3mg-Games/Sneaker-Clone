@@ -31,7 +31,7 @@ public class SaveAndLoadSection3 : MonoBehaviour
     private void Awake()
     {
         data = SaveManagerSection3.Load();
-        LoadGame();
+        //LoadGame();
     }
     public void SaveGame()
     {

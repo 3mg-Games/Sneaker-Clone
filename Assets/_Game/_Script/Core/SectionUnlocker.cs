@@ -23,9 +23,10 @@ namespace Sneaker.Core
 
         public void unlockSection()
         {
-            StartCoroutine(unlock(cameraTransitionSpeed));
+            StartCoroutine(unlock1(cameraTransitionSpeed));
+            StartCoroutine(unlock2(cameraTransitionSpeed));
         }
-        IEnumerator unlock(float t)
+        IEnumerator unlock1(float t)
         {
             if (gm.Level >= UnlockLevel[0] )
             {
@@ -44,17 +45,17 @@ namespace Sneaker.Core
                 Unlocked[0] = true;
 
             }
-
-            if (gm.Level >= UnlockLevel[1])
+        }
+        IEnumerator unlock2(float t)
+        {
+            if (gm.Level >= UnlockLevel[1] && !Unlocked[1])
             {
-                
-                if(gm.Level == UnlockLevel[1] && !Unlocked[1])
-                {
-                    gm.GameplayPause = true;
-                    CameraAnimation.Play("Third U");
-                    FindObjectOfType<GASetup>().roomUnlocked(UnlockSection[1].transform);
-                    FindObjectOfType<SAVE>().Save = 0;
-                }
+                Debug.LogError("Throw");
+                CameraAnimation.Play("Third U");
+                FindObjectOfType<GASetup>().roomUnlocked(UnlockSection[1].transform);
+                FindObjectOfType<SAVE>().Save = 0;
+                gm.GameplayPause = true;
+
                 yield return new WaitForSeconds(t);
                 LockedSections[1].SetActive(false);
                 UnlockSection[1].SetActive(true);

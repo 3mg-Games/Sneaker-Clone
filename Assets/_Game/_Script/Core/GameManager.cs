@@ -200,8 +200,7 @@ namespace Sneaker.Core
             currentServedCount -= maxCustomerToServe;
             maxCustomerToServe = MaxCustomerCount();
             FindObjectOfType<Tutorial>().resetUI();
-            levelUpdateButton.GetComponent<Animator>().Play("OUT");
-            
+            levelUpdateButton.GetComponent<Animator>().Play("OUT");            
         }
         int custCount;
         public int MaxCustomerCount()
