@@ -5510,7 +5510,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3ffc45422ab85b48b87f7e6d8c0af52, type: 3}
-  m_Color: {r: 0.76470596, g: 0.60784316, b: 0.49411768, a: 1}
+  m_Color: {r: 0.7647059, g: 0.60784316, b: 0.49411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -6288,7 +6288,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3ffc45422ab85b48b87f7e6d8c0af52, type: 3}
-  m_Color: {r: 0.76470596, g: 0.60784316, b: 0.49411768, a: 1}
+  m_Color: {r: 0.7647059, g: 0.60784316, b: 0.49411765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -6578,8 +6578,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.848793, y: 0.4756317, z: 4.5477943}
-  m_Center: {x: -0.9190788, y: -0.26218414, z: 2.160387}
+  m_Size: {x: 10.456192, y: 0.4756317, z: 5.8832893}
+  m_Center: {x: -0.9508743, y: -0.26218414, z: 2.1921864}
 --- !u!114 &1151670428313661731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6994,7 +6994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClothIDNumber: 6
   RackCloths: []
-  RackPrice: {fileID: 7872868843952102808}
+  RackPrice: {fileID: 1089371019884253111}
   ClothStackingOnRack: {fileID: 1151670429625733962}
   StoreGraphics: {fileID: 1151670428852040090}
   PurchaseGraphics: {fileID: 8280811144439394801}
@@ -8344,7 +8344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3ffc45422ab85b48b87f7e6d8c0af52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4f0f41df39dcc1408948adf8f644ab3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9031,7 +9031,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 03078e92669ebf9468392fed2f25b6b5, type: 2}
+  - {fileID: 2100000, guid: 400fcaba6f2860d479588f7ca0b641d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9137,7 +9137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3ffc45422ab85b48b87f7e6d8c0af52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4f0f41df39dcc1408948adf8f644ab3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9791,7 +9791,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 03078e92669ebf9468392fed2f25b6b5, type: 2}
+  - {fileID: 2100000, guid: 400fcaba6f2860d479588f7ca0b641d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10452,8 +10452,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.595154, y: 0.4756317, z: 4.267971}
-  m_Center: {x: -0.6231613, y: -0.26218414, z: -3.087141}
+  m_Size: {x: 10.208847, y: 0.4756317, z: 5.809376}
+  m_Center: {x: -0.6566696, y: -0.26218414, z: -3.1206493}
 --- !u!114 &1151670429927444317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10539,7 +10539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 03078e92669ebf9468392fed2f25b6b5, type: 2}
+  - {fileID: 2100000, guid: 400fcaba6f2860d479588f7ca0b641d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15893,8 +15893,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280549378
-  m_fontColor: {r: 0.008716875, g: 0, b: 0.14150941, a: 1}
+    rgba: 4282650904
+  m_fontColor: {r: 0.09411765, g: 0.06666667, b: 0.26666668, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -31514,8 +31514,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279510839
+  m_fontColor: {r: 0.21568628, g: 0.15294118, b: 0.078431375, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -31766,8 +31766,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280175287
-  m_fontColor: {r: 0.7169812, g: 0.28857592, b: 0.11836952, a: 1}
+    rgba: 4279510839
+  m_fontColor: {r: 0.21568628, g: 0.15294118, b: 0.078431375, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -46911,8 +46911,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280549378
-  m_fontColor: {r: 0.008716875, g: 0, b: 0.14150941, a: 1}
+    rgba: 4282650904
+  m_fontColor: {r: 0.09411765, g: 0.06666667, b: 0.26666668, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
