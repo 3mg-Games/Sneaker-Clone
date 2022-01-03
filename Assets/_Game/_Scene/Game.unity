@@ -2479,7 +2479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &54017070
 Transform:
   m_ObjectHideFlags: 0
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   Border: {fileID: 620646111}
   MaxMoneyNeededToUnlock: 300
   MoneyReduceSpeed: 4
-  isExpansion: 0
+  isExpansion: 1
 --- !u!65 &103729255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3789,7 +3789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &167455185
 Transform:
   m_ObjectHideFlags: 0
@@ -18273,11 +18273,11 @@ MonoBehaviour:
   lastLevelCount: {fileID: 993392069}
   CustomerCount: {fileID: 1251571029}
   levelSilder: {fileID: 2104388992}
-  currentServedCount: 35
+  currentServedCount: 0
   levelIncrementalSpeed: 20
   levelDecreaseSpeed: 250
   maxCustomerToServe: 11
-  Level: 8
+  Level: 6
   FittingStationList: []
   SectionsList: []
   ProcessingStationList: []
@@ -34283,7 +34283,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -34490,7 +34490,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -35564,7 +35564,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -42121,7 +42121,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -50506,7 +50506,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -55357,7 +55357,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -55542,7 +55542,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -59686,7 +59686,7 @@ MonoBehaviour:
   Border: {fileID: 4507721444515719158}
   MaxMoneyNeededToUnlock: 1500
   MoneyReduceSpeed: 20
-  isExpansion: 1
+  isExpansion: 0
 --- !u!65 &4507721445007532366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60449,7 +60449,7 @@ PrefabInstance:
     - target: {fileID: 2249815719428159620, guid: 53c3dc62ca54f534f98c91988334377d,
         type: 3}
       propertyPath: isExpansion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2249815719428159620, guid: 53c3dc62ca54f534f98c91988334377d,
         type: 3}
@@ -66258,7 +66258,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -83039,7 +83039,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -83235,7 +83235,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
