@@ -3869,7 +3869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59c99a150f5c294d99cb93797ecdb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psau: {fileID: 1344046253}
+  psau: {fileID: 1021535499}
   PlayerArrow: {fileID: 1209843151}
   RackArrow1: {fileID: 1612816019}
   RackArrow2: {fileID: 663471422}
@@ -9555,6 +9555,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993392067}
   m_CullTransparentMesh: 1
+--- !u!114 &1021535499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1825886220862536898, guid: 13e402890fda7c74caca09ce8dcb3e94,
+    type: 3}
+  m_PrefabInstance: {fileID: 2055457012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61086528b3b507541a2f71b637fd740c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025137640
 GameObject:
   m_ObjectHideFlags: 0
