@@ -199,7 +199,7 @@ namespace Sneaker.Core
             GetComponent<SectionUnlocker>().unlockSection();
             currentServedCount -= maxCustomerToServe;
             maxCustomerToServe = MaxCustomerCount();
-            FindObjectOfType<Tutorial>().resetUI();
+            //FindObjectOfType<Tutorial>().resetUI();
             levelUpdateButton.GetComponent<Animator>().Play("OUT");
             
         }

@@ -29,7 +29,7 @@ public class SaveAndLoadSection2 : MonoBehaviour
     private void Awake()
     {
         data = SaveManagerSection2.Load();
-        LoadGame();
+        //LoadGame();
     }
     public void SaveGame()
     {
