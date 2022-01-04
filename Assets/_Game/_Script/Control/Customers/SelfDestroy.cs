@@ -16,11 +16,11 @@ public class SelfDestroy : MonoBehaviour
         x = 5f;
         y = 5f;
         gm = FindObjectOfType<Sneaker.Core.GameManager>();
-        if (!s2 && tut.CustomerServing)
+        if (!s2 && tut.CustomerServing || gm.Level > 0)
         {
             Destroy(this.gameObject);
         }
-        if(s2 && tut.tutorial2Over)
+        if(s2 && tut.tutorial2Over || gm.Level > 5)
         {
             GetComponent<Sneaker.Movement._CustomerMovement>().target.GetComponent<Sneaker.Movement.dottedCircle>().occupied = false;
             Destroy(this.gameObject);
@@ -30,7 +30,7 @@ public class SelfDestroy : MonoBehaviour
     {
         if (tut.CustomerServing)
             x -= Time.deltaTime;
-        if (!s2 && tut.CustomerServing && x<=0)
+        if (!s2 && tut.CustomerServing && x<=0 || gm.Level > 0)
         {
             Destroy(this.gameObject);
         }
@@ -39,7 +39,7 @@ public class SelfDestroy : MonoBehaviour
         {
             y -= Time.deltaTime;
         }
-        if(y <= 0 && s2 && tut.tutorial2Over)
+        if(y <= 0 && s2 && tut.tutorial2Over || gm.Level > 5)
         {
             GetComponent<Sneaker.Movement._CustomerMovement>().target.GetComponent<Sneaker.Movement.dottedCircle>().occupied = false;
             Destroy(this.gameObject);

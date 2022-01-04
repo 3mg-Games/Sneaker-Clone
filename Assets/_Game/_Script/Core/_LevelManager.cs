@@ -11,7 +11,7 @@ namespace Sneaker.Core
 
         public Transform spwanPos;
         public Transform EndPos;
-        public GameObject Female1;
+        public GameObject[] Female;
 
         public GameObject Money;
         public GameObject Money1;
@@ -95,7 +95,8 @@ namespace Sneaker.Core
                 spwnner -= Time.deltaTime;
             if (spwnner <= 0)
             {
-                GameObject customer = Instantiate(Female1, spwanPos.position, Quaternion.identity);
+                int i = Random.Range(0, 6);
+                GameObject customer = Instantiate(Female[i], spwanPos.position, Quaternion.identity);
                 customer.GetComponent<Sneaker.Movement._CustomerMovement>().levelManager = GetComponent<_LevelManager>();
                 customer.GetComponent<Sneaker.Movement._CustomerMovement>().end = EndPos;
                 customer.transform.parent = spwanPos;

@@ -4966,7 +4966,13 @@ MonoBehaviour:
   OpenRacks: 
   spwanPos: {fileID: 1751571757430665433}
   EndPos: {fileID: 1751571758471160695}
-  Female1: {fileID: 440059315317121694, guid: 269c380eb426dd74fb0d9cef40063dd1, type: 3}
+  Female:
+  - {fileID: 440059315317121694, guid: 269c380eb426dd74fb0d9cef40063dd1, type: 3}
+  - {fileID: 440059315317121694, guid: 3a1461109b3288d40931bb1e0a7d5acb, type: 3}
+  - {fileID: 440059315317121694, guid: ab9fc678be1be5f47a4692f90b12d2df, type: 3}
+  - {fileID: 440059315317121694, guid: afdb05c7760d16c4e9fe220d33d74360, type: 3}
+  - {fileID: 440059315317121694, guid: 438bad2c46a51954bb1f6b8006776313, type: 3}
+  - {fileID: 440059315317121694, guid: 6800bd759d00cea4795cc476ade56ae6, type: 3}
   Money: {fileID: 4151393800474405658, guid: 6a837d29780f043499ac87e51a9e962f, type: 3}
   Money1: {fileID: 4151393800474405658, guid: 6a837d29780f043499ac87e51a9e962f, type: 3}
   Rack0: {fileID: 1751571756835364744}

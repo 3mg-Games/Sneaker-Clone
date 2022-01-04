@@ -24,12 +24,12 @@ namespace Sneaker.Core
         public void unlockSection()
         {
             StartCoroutine(unlock(cameraTransitionSpeed));
+            StartCoroutine(unlock1(cameraTransitionSpeed));
         }
         IEnumerator unlock(float t)
         {
             if (gm.Level >= UnlockLevel[0] )
-            {
-               
+            {               
                 if(gm.Level == UnlockLevel[0] && !Unlocked[0])
                 {
                     gm.GameplayPause = true;
@@ -44,11 +44,13 @@ namespace Sneaker.Core
                 Unlocked[0] = true;
 
             }
-
+        }
+        IEnumerator unlock1(float t)
+        {
             if (gm.Level >= UnlockLevel[1])
             {
-                
-                if(gm.Level == UnlockLevel[1] && !Unlocked[1])
+
+                if (gm.Level == UnlockLevel[1] && !Unlocked[1])
                 {
                     gm.GameplayPause = true;
                     CameraAnimation.Play("Third U");
