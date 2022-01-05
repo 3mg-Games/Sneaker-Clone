@@ -6556,7 +6556,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -15860,7 +15860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &903555776
 Transform:
   m_ObjectHideFlags: 0
@@ -18822,8 +18822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020c6c24793e199488aa649792261c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxMoney: 850
-  MoneyCounterSpeed: 1
+  MaxMoney: 548
+  MoneyCounterSpeed: 50
   PlayerClothCollectionLimit: 40
   GameplayPause: 0
   MoneyCount: {fileID: 387089550}
@@ -18843,11 +18843,11 @@ MonoBehaviour:
   lastLevelCount: {fileID: 993392069}
   CustomerCount: {fileID: 1251571029}
   levelSilder: {fileID: 2104388992}
-  currentServedCount: 31
+  currentServedCount: 12
   levelIncrementalSpeed: 20
   levelDecreaseSpeed: 250
   maxCustomerToServe: 11
-  Level: 13
+  Level: 4
   FittingStationList: []
   SectionsList: []
   ProcessingStationList: []
@@ -20924,7 +20924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1137721176
 Transform:
   m_ObjectHideFlags: 0
@@ -24626,7 +24626,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -32153,7 +32153,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -36107,7 +36107,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -36821,7 +36821,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -37514,9 +37514,9 @@ MonoBehaviour:
   MoneyReduceSpeed: 7
   MaxMoneyNeededToUnlock: 750
   isPlayerNear: 0
-  isRackClosed: 0
-  isRackOpen: 1
-  Unlock: 1
+  isRackClosed: 1
+  isRackOpen: 0
+  Unlock: 0
   isPlayerOnClosedRack: 0
   Rack0: 0
   Rack1: 1
@@ -51215,7 +51215,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -57242,7 +57242,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -57427,7 +57427,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -57936,7 +57936,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -60569,7 +60569,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -60980,7 +60980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4507721444792173205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61169,7 +61169,7 @@ MonoBehaviour:
   Border: {fileID: 0}
   MaxMoneyNeededToUnlock: 950
   MoneyReduceSpeed: 9
-  isExpansion: 1
+  isExpansion: 0
 --- !u!1 &4507721444860367390
 GameObject:
   m_ObjectHideFlags: 0
@@ -61668,7 +61668,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -86272,7 +86272,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
