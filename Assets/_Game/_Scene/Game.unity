@@ -3103,7 +3103,7 @@ MonoBehaviour:
   Border: {fileID: 620646111}
   MaxMoneyNeededToUnlock: 300
   MoneyReduceSpeed: 4
-  isExpansion: 0
+  isExpansion: 1
 --- !u!65 &103729255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15860,7 +15860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &903555776
 Transform:
   m_ObjectHideFlags: 0
@@ -18822,7 +18822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020c6c24793e199488aa649792261c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxMoney: 548
+  MaxMoney: 3548
   MoneyCounterSpeed: 50
   PlayerClothCollectionLimit: 40
   GameplayPause: 0
@@ -18847,7 +18847,7 @@ MonoBehaviour:
   levelIncrementalSpeed: 20
   levelDecreaseSpeed: 250
   maxCustomerToServe: 11
-  Level: 4
+  Level: 7
   FittingStationList: []
   SectionsList: []
   ProcessingStationList: []
@@ -20924,7 +20924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1137721176
 Transform:
   m_ObjectHideFlags: 0
@@ -24626,7 +24626,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -27053,7 +27053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1568696950
 Transform:
   m_ObjectHideFlags: 0
@@ -32153,7 +32153,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -36107,7 +36107,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -36314,7 +36314,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -37393,7 +37393,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -43950,7 +43950,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -52363,7 +52363,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -57242,7 +57242,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -57427,7 +57427,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -60980,7 +60980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &4507721444792173205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84937,7 +84937,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
@@ -85133,7 +85133,7 @@ PrefabInstance:
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
       propertyPath: isStationOpen
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313410795820959407, guid: 0d8bc1c16433183408d4d6762ab94d98,
         type: 3}
