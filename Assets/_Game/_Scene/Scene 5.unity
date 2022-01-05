@@ -59325,7 +59325,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2126697080 stripped
 MonoBehaviour:
@@ -59437,6 +59437,10 @@ PrefabInstance:
       propertyPath: tut
       value: 
       objectReference: {fileID: 335202522}
+    - target: {fileID: 520851772, guid: f6218903a6ab8a043b117da480c1cef7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1030866214, guid: f6218903a6ab8a043b117da480c1cef7, type: 3}
       propertyPath: m_Enabled
       value: 1
